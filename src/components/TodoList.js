@@ -8,16 +8,19 @@ class TodoList extends React.Component {
 
     return (
       <div>
-      {list.map((element, index) =>
-       <label 
-       htmlFor={index}
-       className="todo-item"
-       key={index}>
-         <input 
-         className='todo-check' 
-         id={index} type="checkbox" 
-         onChange={() => removeTask(element)}/>{element}</label>)}
-    </div>
+        {list.map((element, index) =>
+          <label
+            //  htmlFor={index}
+            className="todo-item"
+            key={index}>
+            <input
+              className='todo-check'
+              //  id={index} 
+              type="checkbox"
+              onChange={() => removeTask(element)} />
+            {element}
+          </label>)}
+      </div>
     )
   }
 }

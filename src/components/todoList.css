@@ -10,6 +10,8 @@
     align-items: center;
     width: 80%;
     color: #1E1E1F;
+    /* transition-delay:ease-in-out 1000ms;  */
+    /* transition: width 2s, height 4s; */
 }
 
 .todo-check{

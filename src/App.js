@@ -36,7 +36,7 @@ class App extends React.Component {
     const {lista} = this.state;
     const newList = lista.filter((element) => element!==item);
     localStorage.setItem('TodoList', JSON.stringify(newList))
-    setTimeout(()=> this.setState({lista: newList}), 100)   
+    setTimeout(()=> this.setState({lista: newList}), 300)   
   }
 
   preventPost = event => {
