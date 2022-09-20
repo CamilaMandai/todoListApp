@@ -39,6 +39,10 @@ class App extends React.Component {
     setTimeout(()=> this.setState({lista: newList}), 100)   
   }
 
+  preventPost = event => {
+    event.preventDefault();
+  }
+
   render() {
     const { lista, newTodo } = this.state;
     return (
@@ -47,7 +51,7 @@ class App extends React.Component {
         <img src={icone} alt="icone"/>
         <h1>Lista de Tarefas</h1>
         </div>
-        <form className='add-item-field'>
+        <form className='add-item-field' onSubmit={this.preventPost}>
         <InputText handleChange={this.handleChange} newTodo={newTodo}/>
         <Button handleClick={this.handleClick} />
         </form>
