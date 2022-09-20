@@ -1,0 +1,24 @@
+.todo-item{
+    background-color: white;
+    height: 30px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    color: #1E1E1F;
+}
+
+.todo-check{
+    margin-left: 20px;
+    margin-right: 20px;
+    border-color: #1E1E1F;
+}
+
+input[type='checkbox']{
+  transform: scale(1.8);
+  /* background-color: rgb(100, 91, 91); */
+}
