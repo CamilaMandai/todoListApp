@@ -4,6 +4,8 @@ import Button from './components/Button';
 import TodoList from './components/TodoList';
 import './App.css';
 import icone from './icons/done.png';
+import { requestCreateTask, requestRemoveTask, requestTasks } from './helpers/axios';
+
 
 
 class App extends React.Component {
@@ -12,9 +14,11 @@ class App extends React.Component {
     newTodo: '',
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const storageList = JSON.parse(localStorage.getItem('TodoList')) || [];
-    this.setState({lista: storageList});
+    // const storageList = await requestTasks();
+    // console.log(storageList)
+    this.setState({lista: storageList.map((task) => task.task)});
   }
 
   handleClick = () => {
